@@ -1,6 +1,6 @@
 package acmicpc;
 
-public class No4673DfsBfs {
+public class No4673 {
 
     public static void main(String[] args) {
         int num = 1;

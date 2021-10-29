@@ -5,7 +5,7 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class no1260DfsBfs {
+public class No1260 {
     static int n;
     static int[][] edge;
 

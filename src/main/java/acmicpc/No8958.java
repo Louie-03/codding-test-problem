@@ -2,7 +2,7 @@ package acmicpc;
 
 import java.util.Scanner;
 
-public class No8958DfsBfs {
+public class No8958 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
