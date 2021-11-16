@@ -23,8 +23,3 @@ public class SelectionSort {
         }
     }
 }
-
-• 상속
-• 연관관계
-• 객체 그래프 탐색
-• 비교하기
