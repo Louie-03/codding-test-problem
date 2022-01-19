@@ -12,30 +12,25 @@ public class No42840 {
     }
 
     private int[] getScores(int[] answers) {
+        int[][] patterns = {
+                {1, 2, 3, 4, 5},
+                {2, 1, 2, 3, 2, 4, 2, 5},
+                {3, 3, 1, 1, 2, 2, 4, 4, 5, 5}
+        };
         int[] scores = new int[3];
-        int[] number2Answer = {2, 1, 2, 3, 2, 4, 2, 5};
-        int[] number3Answer = {3, 1, 2, 4, 5};
         for (int i = 0; i < answers.length; i++) {
             int answer = answers[i];
-            if (answer == i % 5 + 1) {
-                scores[0]++;
-            }
-            if (answer == number2Answer[i % 8]) {
-                scores[1]++;
-            }
-            if (answer == number3Answer[i % 10 / 2]) {
-                scores[2]++;
+            for (int j = 0; j < scores.length; j++) {
+                if (answer == patterns[j][i % patterns[j].length]) {
+                    scores[j]++;
+                }
             }
         }
         return scores;
     }
 
     private int getMaxScore(int[] scores) {
-        int max = scores[0];
-        for (int i = 1; i < scores.length; i++) {
-            max = max(max, scores[i]);
-        }
-        return max;
+        return Math.max(scores[0], Math.max(scores[1], scores[2]));
     }
 
     private List<Integer> getResult(int[] scores, int max) {
@@ -46,9 +41,5 @@ public class No42840 {
             }
         }
         return result;
-    }
-
-    private int max(int num1, int num2) {
-        return num1 > num2 ? num1 : num2;
     }
 }
