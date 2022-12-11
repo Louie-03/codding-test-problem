@@ -8,6 +8,16 @@ import java.util.StringTokenizer;
 
 public class Main {
 
+    /*
+     문제 : 에디터
+     유형 : 스택
+     시간 복잡도 : O(N)
+     난이도 : 조금 쉬움
+     시간 : 30m
+     uri : https://www.acmicpc.net/problem/1406
+     날짜 : 22.12.12
+     refer : https://minhamina.tistory.com/17
+     */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String string = br.readLine();
@@ -34,6 +44,16 @@ public class Main {
             }
         }
         StringBuilder sb = new StringBuilder();
+        for (Character character : leftStack) {
+            sb.append(character);
+        }
+        while (!rightStack.isEmpty()) {
+            sb.append(rightStack.pop());
+        }
         System.out.println(sb);
     }
+    /*
+    왼쪽 스택은 뺄때마다 맨 뒤에 있는게 나온다.
+    오른쪽 스택은 뺄때마다 맨 앞에 있는게 나온다.
+     */
 }
