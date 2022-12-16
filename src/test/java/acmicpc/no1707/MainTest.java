@@ -1,7 +1,5 @@
 package acmicpc.no1707;
 
-import static acmicpc.no1707.Main.bfs;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,7 +27,7 @@ class MainTest {
             map.get(b).add(a);
         }
         boolean[] check = new boolean[v + 1];
-        System.out.println(bfs(v, map, check));
+//        System.out.println(bfs(v, map, check));
         System.out.println(LocalDateTime.now());
     }
 
